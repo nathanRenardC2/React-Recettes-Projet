@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PageRecettes from './components/PageRecettes';
-import PageBlog from './components/PageBlog';
+import PageRecettes from './components/Recettes/PageRecettes';
+import PageBlog from './components/Blog/PageBlog';
 
 function App() {
 

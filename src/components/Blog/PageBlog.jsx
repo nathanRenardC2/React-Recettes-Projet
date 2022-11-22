@@ -1,4 +1,4 @@
-import Menu from "./Menu";
+import Menu from "../Menu";
 import Message from "./Message";
 import { useState } from "react";
 import { useEffect } from "react";
