@@ -75,7 +75,7 @@ export default function Commentaire({name, message, date, id, getData}){
                             placeholder="Votre message" 
                             value={newMessage} 
                             onChange={(e) => setNewMessage(e.target.value)}></textarea>
-                            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Modifier</button>
+                            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Valider</button>
                         </form>
                     ) : (
                         <>
