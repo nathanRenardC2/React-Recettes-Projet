@@ -18,9 +18,11 @@ export default function Recettes() {
         }
         )
         .catch(error => console.log(error));
+
     }, [search]);
-  
-  
+
+
+
     return (
       <div className="App">
         <h1 className='text-3xl mb-6'>Recettes de cuisine</h1>
@@ -32,4 +34,4 @@ export default function Recettes() {
         </div>
       </div>
     );
-}
+  }
