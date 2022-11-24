@@ -63,7 +63,7 @@ export default function Recettes() {
               if(category === meal.strCategory || category === undefined){
                 return <Recette key={meal.idMeal} meal={meal}></Recette>
               }
-          }) : <p>Il n'y a pas de recette correspondant à votre recherche</p>}
+          }) : <p className='mt-10'>Il n'y a pas de recette correspondant à votre recherche</p>}
         </div>
       </div>
     );
