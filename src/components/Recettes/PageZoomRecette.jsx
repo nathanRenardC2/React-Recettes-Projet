@@ -61,7 +61,7 @@ export default function PageZoomRecette(props){
     return (
         <>
             <Menu />
-            <div class="flex justify-center">
+            <div className="flex justify-center">
                 <div className="mb-10 p-10 md:p-4 w-10/12 md:w-2/3 bg-slate-50 drop-shadow-xl rounded-lg">
                     <div className="flex flex-col items-center md:mb-10 md:mt-5">
                         <h1 className="text-xl mb-3 md:text-5xl font-bold">{data.strMeal} ( {data.strArea} )</h1>
@@ -69,7 +69,8 @@ export default function PageZoomRecette(props){
                     </div>
                     <div className="md:flex flex-col md:justify-between md:items-center m-5">
                         <img className="rounded-lg drop-shadow-xl border-4 mb-5 md:mb-0 text-justify" src={data.strMealThumb} alt={data.strMeal + "_image"} />
-                        <div className="md:flex md:flex-col md:items-center md:mt-20">
+                        <div className="md:flex md:flex-col md:items-center md:mt-10">
+                            <hr />
                             <h2 className="text-center md:text-start font-bold text-xl md:text-2xl mb-3">Ingredients :</h2>
                             <ul className="flex flex-col items-center mb-3">
                                 {ingredients.map((ingredient, index) => (
@@ -80,9 +81,10 @@ export default function PageZoomRecette(props){
                                     </li>
                                 ))}
                             </ul>
+                            <hr />
                         </div>
                     </div>
-                    <div className="md:m-24">
+                    <div className="md:m-10">
                         <h2 className="text-center text-xl md:text-2xl font-bold mb-3">Instructions : </h2>
                         <p className="text-center">{data.strInstructions}</p>
                     </div>
