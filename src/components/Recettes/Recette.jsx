@@ -7,11 +7,11 @@ export default function Recette({ meal }) {
       className="card"
       to={`/recette/${meal.idMeal}`}
       >
-      <div>
+      <div className="p-4">
         <h2>{meal.strMeal}</h2>
         <p>Origin : {meal.strArea}</p>
         <img src={meal.strMealThumb} alt="" />
-        <p>{meal.strInstructions.slice(0, 300)}...</p>
+        <p className="text-justify">{meal.strInstructions.slice(0, 100)}...</p>
       </div>
     </NavLink>
   );
