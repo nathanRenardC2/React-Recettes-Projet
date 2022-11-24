@@ -2,20 +2,25 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Recette from './Recette';
 import Search from './Search';
+import Loading from '../Loading';
 
 export default function Recettes() {
     const [data, setData] = useState([]);
     const [search, setSearch] = useState("");
     const [allCategories, setAllCategories] = useState();
     const [category, setCategory] = useState(undefined);
+    const [loading, setLoading] = useState(false);
   
     useEffect(() => {
+      setLoading(true);
       axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=' + search)
         .then(response => {
          if(response.data.meals === null){
             setData([]);
+            setLoading(false);
          } else {
             setData(response.data);
+            setLoading(false);
           }
         })
         .catch(error => console.log(error));
@@ -58,6 +63,7 @@ export default function Recettes() {
           </div>
         }
 
+       {loading ? <Loading/> : 
         <div className="card_list">
           {(data.length !== 0) ? data.meals.map((meal) => {
               if(category === meal.strCategory || category === undefined){
@@ -65,6 +71,7 @@ export default function Recettes() {
               }
           }) : <p className='mt-10'>Il n'y a pas de recette correspondant à votre recherche</p>}
         </div>
+       }
       </div>
     );
   }

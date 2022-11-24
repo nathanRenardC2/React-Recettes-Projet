@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Loading from "../Loading";
 
 export default function Recette({ meal }) {
   return (
