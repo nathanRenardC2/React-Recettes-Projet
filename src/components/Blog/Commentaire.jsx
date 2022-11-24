@@ -25,7 +25,7 @@ export default function Commentaire({name, message, date, id, getData}){
             id: id,
             author: name,
             content: newMessage,
-            date: date
+            date: new Date()
         })
         .then((response) => {
             getData();
