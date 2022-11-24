@@ -79,8 +79,8 @@ export default function Commentaire({name, message, date, id, getData}){
                 <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4 w-1/2 md:w-full">
                     <div className="px-4 py-2">
                         <div className="flex items-center">
-                            {!isEditing && <button onClick={openDeleteModal} className='bg-red-600 hover:bg-red-700 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
-                            {!isEditing ? <button onClick={openEditor} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Modifier</button> : <button onClick={closeEditor} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Annuler</button>}
+                            {!isEditing && <button onClick={openDeleteModal} className='bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
+                            {!isEditing ? <button onClick={openEditor} className='bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-bold py-1 px-2 rounded mb-3'>Modifier</button> : <button onClick={closeEditor} className='bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-bold py-1 px-2 rounded mb-3'>Annuler</button>}
                         </div>
                             
                         
@@ -91,7 +91,7 @@ export default function Commentaire({name, message, date, id, getData}){
                                 placeholder="Votre message" 
                                 value={newMessage} 
                                 onChange={(e) => setNewMessage(e.target.value)}></textarea>
-                                <button className='bg-green-400 hover:bg-green-500 text-white font-bold py-1 px-2 rounded mb-3'>Valider</button>
+                                <button className='bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-300 text-white font-bold py-1 px-2 rounded mb-3'>Valider</button>
                             </form>
                         ) : (
                             <>
@@ -110,7 +110,7 @@ export default function Commentaire({name, message, date, id, getData}){
                             <div className="p-6 text-center">
                                 <svg aria-hidden="true" className="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Etes-vous sûr de vouloir supprimer ce commentaire ?</h3>
-                                <button onClick={deleteComment} type="button" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                <button onClick={deleteComment} type="button" className="text-white bg-red-600 hover:bg-red-800  focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                     Oui, je suis sûr
                                 </button>
                                 <button onClick={closeDeleteModal} type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Non, annuler</button>

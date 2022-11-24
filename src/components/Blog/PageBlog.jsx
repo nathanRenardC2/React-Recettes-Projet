@@ -4,15 +4,19 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from 'axios';
 import Commentaire from "./Commentaire";
+import Loading from "../Loading";
 
 export default function PageBlog() {
 
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     async function getData(){
+        setLoading(true);
         axios.get('http://localhost:3003/articles')
         .then((response) => {
             setData(response.data);
+            setLoading(false);
         })
     }
 
@@ -30,12 +34,13 @@ export default function PageBlog() {
         <>
             <Menu />
             <Message name={name} setName={setName} message={message} setMessage={setMessage} getData={getData} />
-            <div className="mt-10 mb-10">
-                {data.map((article) => (
-                    <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
-                ))} 
-                
-            </div>
+            {loading ? <Loading /> : 
+                <div className="mt-10 mb-10">
+                    {data.map((article) => (
+                        <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
+                    ))}     
+                </div>  
+            }
         </>
     );
 }
