@@ -62,10 +62,10 @@ export default function PageZoomRecette(props){
         <>
             <Menu />
             <div class="flex justify-center">
-                <div className="m-10 p-10 md:p-4 w-2/3 bg-slate-50 drop-shadow-xl rounded-lg">
+                <div className="md:m-10 p-10 md:p-4 w-10/12 md:w-2/3 bg-slate-50 drop-shadow-xl rounded-lg">
                     <div className="flex flex-col items-center md:mb-10 md:mt-5">
                         <h1 className="text-xl mb-3 md:text-5xl font-bold">{data.strMeal} ( {data.strArea} )</h1>
-                        <p className="md:text-xl font-medium">Category : {data.strCategory}</p>
+                        <p className="md:text-xl font-medium md:mt-3">Category : {data.strCategory}</p>
                     </div>
                     <div className="md:flex flex-col md:justify-between md:items-center m-5">
                         <img className="rounded-lg drop-shadow-xl border-4 mb-5 md:mb-0 text-justify" src={data.strMealThumb} alt={data.strMeal + "_image"} />
