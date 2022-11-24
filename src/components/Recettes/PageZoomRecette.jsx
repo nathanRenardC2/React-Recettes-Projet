@@ -2,6 +2,7 @@ import Menu from "../Menu"
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loading from "../Loading";
 
 export default function PageZoomRecette(props){
     // On récupère l'id placé dans l'url
@@ -12,11 +13,14 @@ export default function PageZoomRecette(props){
     const [data, setData] = useState([]);
     const [ingredients, setIngredients] = useState([]);
     const [measures, setMeasures] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id)
         .then(response => {
             setData(response.data.meals[0]);
+            setLoading(false);
             
         })
         .catch(error => console.log(error));
@@ -61,6 +65,7 @@ export default function PageZoomRecette(props){
     return (
         <>
             <Menu />
+            {loading ? <Loading/> : 
             <div className="flex justify-center">
                 <div className="mb-10 p-10 md:p-4 w-10/12 md:w-2/3 bg-slate-50 drop-shadow-xl rounded-lg">
                     <div className="flex flex-col items-center md:mb-10 md:mt-5">
@@ -90,6 +95,7 @@ export default function PageZoomRecette(props){
                     </div>
                 </div>
             </div>
+}
         </>
     )
 

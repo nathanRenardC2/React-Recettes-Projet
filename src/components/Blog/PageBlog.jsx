@@ -25,6 +25,7 @@ export default function PageBlog() {
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
 
+
     return (
         <>
             <Menu />
@@ -32,7 +33,8 @@ export default function PageBlog() {
             <div className="mt-10 mb-10">
                 {data.map((article) => (
                     <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
-                ))}
+                ))} 
+                
             </div>
         </>
     );
