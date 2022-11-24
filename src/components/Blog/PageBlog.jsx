@@ -29,7 +29,7 @@ export default function PageBlog() {
         <>
             <Menu />
             <Message name={name} setName={setName} message={message} setMessage={setMessage} getData={getData} />
-            <div className="mt-10">
+            <div className="mt-10 mb-10">
                 {data.map((article) => (
                     <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
                 ))}
