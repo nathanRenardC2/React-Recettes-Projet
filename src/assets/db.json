@@ -1,10 +1,22 @@
 {
   "articles": [
     {
-      "id": 3,
+      "author": "Master Chef",
+      "content": "      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
+      "date": 1669059012451,
+      "id": 1
+    },
+    {
       "author": "Gordon Ramsay",
-      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. lol sylvene",
-      "date": 1669058964425
+      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. ",
+      "date": 1669058964425,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "author": "Nathan Renard",
+      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.\nL'insertion en base de donnée fonctionne bien \nLa modification marche également",
+      "date": "2022-11-24T08:19:54.717Z"
     }
   ]
 }

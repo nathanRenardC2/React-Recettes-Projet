@@ -38,7 +38,7 @@ export default function Commentaire({name, message, date, id, getData}){
      */
     async function deleteComment(e){
         e.preventDefault();
-        await axios.delete('http://localhost:3003/articles/' + e.target.id)
+        await axios.delete('http://localhost:3003/articles/' + id)
         .then((response) => {
             getData();
         })
@@ -65,7 +65,7 @@ export default function Commentaire({name, message, date, id, getData}){
             <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4  w-1/2 md:w-full">
                 <div className="px-4 py-2">
                     <div className="flex items-center">
-                        {!isEditing && <button id={id} onClick={deleteComment} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
+                        {!isEditing && <button onClick={deleteComment} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
                         {!isEditing ? <button onClick={openEditor} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Modifier</button> : <button onClick={closeEditor} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3'>Annuler</button>}
                     </div>
                     {isEditing ? (
