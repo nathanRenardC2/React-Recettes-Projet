@@ -30,8 +30,8 @@ export default function Message({name, setName, message, setMessage, getData}) {
     }
 
     return(
-        <div className="flex justify-center ">
-            <div className="">
+        <div className="flex justify-center">
+            <div className="w-2/3 md:w-1/2">
                 <h1 className='text-3xl mb-6 text-center'>Blog</h1>
                 <form onSubmit={onSubmit} className="flex flex-col text-center justify-center">
                     <input 

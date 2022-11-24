@@ -62,7 +62,7 @@ export default function Commentaire({name, message, date, id, getData}){
     return(
         /* Card pour les messages */
         <div className="flex flex-col items-center">
-            <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4 w-full">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4  w-1/2 md:w-full">
                 <div className="px-4 py-2">
                     <div className="flex items-center">
                         {!isEditing && <button id={id} onClick={deleteComment} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
