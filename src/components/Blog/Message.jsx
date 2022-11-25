@@ -41,9 +41,9 @@ export default function Message({name, setName, message, setMessage, getData}) {
     }
 
     return(
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-white dark:bg-slate-700">
             <div className="w-2/3 md:w-1/2">
-                <h1 className='text-3xl mb-6 text-center'>Blog</h1>
+                <h1 className='text-3xl mb-6 text-center text-black dark:text-white'>Blog</h1>
                 <form onSubmit={onSubmit} className="flex flex-col text-center justify-center">
                     <input 
                         type="text"
@@ -67,8 +67,8 @@ export default function Message({name, setName, message, setMessage, getData}) {
                         onClick={userIsTyping}
                         onChange={(e) => setMessage(e.target.value)} 
                         required></textarea>
-                    {messageToShort && <p class="mt-3 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oh, non !</span> Le message est trop court. Celui-ci doit faire au moins <span className="font-medium">140 caractères</span></p>}
-                    {messageSend && <p class="mt-3 text-sm text-emerald-600 dark:emerald-500"><span className="font-medium">Succès ! </span> Votre message a bien été <span className="font-medium">envoyé ! </span></p>}
+                    {messageToShort && <p className="mt-3 text-sm text-red-600 dark:text-red-500"><span className="font-medium">Oh, non !</span> Le message est trop court. Celui-ci doit faire au moins <span className="font-medium">140 caractères</span></p>}
+                    {messageSend && <p className="mt-3 text-sm text-emerald-600 dark:emerald-500"><span className="font-medium">Succès ! </span> Votre message a bien été <span className="font-medium">envoyé ! </span></p>}
                     <button 
                         type="submit"
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">

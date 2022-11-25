@@ -33,14 +33,16 @@ export default function PageBlog() {
     return (
         <>
             <Menu />
-            <Message name={name} setName={setName} message={message} setMessage={setMessage} getData={getData} />
-            {loading ? <Loading /> : 
-                <div className="mt-10 mb-10">
-                    {data.map((article) => (
-                        <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
-                    ))}     
-                </div>  
-            }
+            <div className="bg-white dark:bg-slate-700 h-screen p-10">
+                <Message name={name} setName={setName} message={message} setMessage={setMessage} getData={getData} />
+                {loading ? <Loading /> : 
+                    <div className="mt-10 mb-10">
+                        {data.map((article) => (
+                            <Commentaire key={article.id} name={article.author} message={article.content} date={article.date} id={article.id} getData={getData}></Commentaire>
+                        ))}     
+                    </div>  
+                }
+            </div>
         </>
     );
 }

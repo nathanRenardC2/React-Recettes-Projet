@@ -76,7 +76,7 @@ export default function Commentaire({name, message, date, id, getData}){
     return(
         <>
             <div className="flex flex-col items-center">
-                <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4 w-1/2 md:w-full">
+                <div className="bg-white dark:bg-slate-700 transition duration-200 border-2 dark-border-slate-700 dark:shadow-white shadow-md rounded-lg overflow-hidden max-w-3xl my-4 w-1/2 md:w-full text-black dark:text-white">
                     <div className="px-4 py-2">
                         <div className="flex items-center">
                             {!isEditing && <button onClick={openDeleteModal} className='bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 text-white font-bold py-1 px-2 rounded mb-3 mr-3'>X</button>}
@@ -95,8 +95,8 @@ export default function Commentaire({name, message, date, id, getData}){
                             </form>
                         ) : (
                             <>
-                                <h1 className="text-gray-900 font-bold text-xl">{name}</h1>
-                                <p className="text-gray-600 text-sm whitespace-pre-line break-all">{message}</p>
+                                <h1 className="font-bold text-xl">{name}</h1>
+                                <p className="text-sm whitespace-pre-line break-all">{message}</p>
                                 <p className="text-end italic mt-3">Posté le : {convertDate(date)}</p> 
                             </>
                         )}

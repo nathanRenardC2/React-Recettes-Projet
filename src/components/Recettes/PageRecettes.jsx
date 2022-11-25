@@ -5,7 +5,9 @@ export default function PageRecettes() {
     return (
         <>
             <Menu />
-            <Recettes />
+            <div className="h-screen">
+                <Recettes />
+            </div>
         </>
     );
 }

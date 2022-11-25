@@ -1,13 +1,12 @@
 import { NavLink } from "react-router-dom";
-import Loading from "../Loading";
 
 export default function Recette({ meal }) {
   return (
     <NavLink
-      className="card"
+      className="card bg-white dark:bg-slate-800 border-4 border-slate-300"
       to={`/recette/${meal.idMeal}`}
       >
-      <div className="p-4">
+      <div className="p-4 text-black dark:text-white">
         <h2>{meal.strMeal}</h2>
         <p>Origin : {meal.strArea}</p>
         <img src={meal.strMealThumb} alt="" />

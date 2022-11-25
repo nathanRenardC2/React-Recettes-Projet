@@ -59,15 +59,13 @@ export default function PageZoomRecette(props){
     }
 
 
-    
-
 
     return (
         <>
             <Menu />
             {loading ? <Loading/> : 
-            <div className="flex justify-center">
-                <div className="mb-10 p-10 md:p-4 w-10/12 md:w-2/3 bg-slate-50 drop-shadow-xl rounded-lg">
+            <div className="flex justify-center bg-white dark:bg-slate-700">
+                <div className="mb-10 p-10 md:p-4 w-10/12 md:w-2/3 drop-shadow-xl rounded-lg text-black dark:text-white">
                     <div className="flex flex-col items-center md:mb-10 md:mt-5">
                         <h1 className="text-xl mb-3 md:text-5xl font-bold">{data.strMeal} ( {data.strArea} )</h1>
                         <p className="md:text-xl font-medium md:mt-3">Category : {data.strCategory}</p>
