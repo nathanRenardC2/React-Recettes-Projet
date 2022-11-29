@@ -4,7 +4,7 @@ export default function Search({ search, setSearch }) {
     <div className="search flex flex-col items-center dark:text-white">
       <label className="mb-3" htmlFor="search">Recherche d'une recette ( en anglais )</label>
       <input
-        className="text-black dark:text-white"
+        className="text-black"
         type="text"
         placeholder="Search..."
         value={search}
