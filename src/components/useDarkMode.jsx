@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 export default function useDarkMode(){
-    // On récupère la valeur du mode sombre dans le localStorage
-    const [theme, setTheme] = useState(localStorage.getItem("darkMode") === "false");
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const colorTheme = theme === 'dark' ? 'light' : 'dark';
 
     useEffect(() =>{
@@ -13,6 +12,7 @@ export default function useDarkMode(){
         root.classList.add(theme);
         localStorage.setItem('theme', theme)
     }, [theme, colorTheme])
+
 
     return[colorTheme, setTheme]
 }
