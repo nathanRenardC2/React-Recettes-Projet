@@ -26,7 +26,7 @@ export default function Recettes() {
     }, [search]);
 
     return (
-      <div className='p-10'>
+      <div className={`p-10 ${data.length === 0 ? "h-screen" : ""}`}>
         <div className="text-center">
           <h1 className='text-3xl dark:text-white mb-6'>Recettes de cuisine</h1>
           <Search search={search} setSearch={setSearch}></Search>

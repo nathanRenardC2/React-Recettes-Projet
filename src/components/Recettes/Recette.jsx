@@ -12,7 +12,6 @@ export default function Recette({ meal, id }) {
   useEffect(() => {
     // On regarde si la recette est déjà sauvegarder
     const recetteIsSave = recettesSave.find((recette) => recette.idMeal === id);
-
     if(recetteIsSave !== undefined){
       setIsSave(true);
     } else {
@@ -31,8 +30,8 @@ export default function Recette({ meal, id }) {
    */
   function saveRecette() {
     // Si la recette est déjà sauvegarder on la supprime de la liste
-    if (recettesSave.includes(meal)) {
-      setRecettesSave(recettesSave.filter((recette) => recette !== meal));
+    if (isSave) {
+      setRecettesSave(recettesSave.filter((recette) => recette.idMeal !== meal.idMeal));
       setIsSave(false);
     }
     // Sinon on l'ajoute à la liste
