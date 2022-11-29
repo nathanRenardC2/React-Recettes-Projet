@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import useDarkMode from './useDarkMode';
+import useDarkMode from './Hook/useDarkMode';
 
 
 export default function Menu() {

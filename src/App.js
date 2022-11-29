@@ -5,8 +5,8 @@ import PageRecettes from './components/Recettes/PageRecettes';
 import PageBlog from './components/Blog/PageBlog';
 import PageZoomRecette from './components/Recettes/PageZoomRecette';
 import './assets/css/main.css';
-import useDarkMode from './components/useDarkMode';
-import PageRecettesSauvegarder from './components/Sauvegarder/PageRecettesSauvegarder';
+import useDarkMode from './components/Hook/useDarkMode';
+import PageRecettesSauvegarder from './components/RecettesSave/PageRecettesSauvegarder';
 import { createContext, useEffect } from 'react';
 import { useState } from 'react';
 
