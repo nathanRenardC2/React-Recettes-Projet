@@ -12,9 +12,9 @@ export default function RecettesSauvegarder(){
 
     return(
         <div className="card_list">
-            {recettesSave.map((recette) => {
-                return <Recette key={recette.idMeal} id={recette.idMeal} meal={recette}></Recette>
-            })}
+            {recettesSave != null ? recettesSave.map((meal, index) => (
+                <Recette meal={meal} id={meal.idMeal} key={index} />
+            )) : <p className="text-center text-black dark:text-white">Aucune recette sauvegarder</p>}
         </div>
     )
 }
