@@ -7,12 +7,27 @@ import PageZoomRecette from './components/Recettes/PageZoomRecette';
 import './assets/css/main.css';
 import useDarkMode from './components/useDarkMode';
 import PageRecettesSauvegarder from './components/Sauvegarder/PageRecettesSauvegarder';
+import { createContext, useEffect } from 'react';
+import { useState } from 'react';
+
+export const RecettesSaveContext = createContext();
 
 function App() {
 
   useDarkMode();
 
+  const [recettesSave, setRecettesSave] = useState([]);
+
+  useEffect(() => {
+    // Si il y'a des recettes sauvegarder dans le localStorage on les récupère
+    if (localStorage.getItem('recettes')) {
+      setRecettesSave(JSON.parse(localStorage.getItem('recettes')));
+    }
+  }, []);
+
+
   return (
+    <RecettesSaveContext.Provider value={[recettesSave, setRecettesSave]}>
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<PageRecettes />} />
@@ -21,6 +36,7 @@ function App() {
             <Route path="/recettes-save" element={<PageRecettesSauvegarder />} />
         </Routes>
       </BrowserRouter>
+    </RecettesSaveContext.Provider>
   );
 }
 

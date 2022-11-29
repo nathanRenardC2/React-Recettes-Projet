@@ -3,7 +3,6 @@ import axios from 'axios';
 import Recette from './Recette';
 import Search from './Search';
 import Loading from '../Loading';
-import { useCallback } from 'react';
 
 export default function Recettes() {
     const [data, setData] = useState([]);
@@ -34,7 +33,7 @@ export default function Recettes() {
         {loading ? <Loading/> : 
           <div className="card_list">
             {(data.length !== 0) ? data.meals.map((meal) => {
-                  return <Recette key={meal.idMeal} meal={meal}></Recette>
+                  return <Recette key={meal.idMeal} id={meal.idMeal} meal={meal}></Recette>
             }) : <p className='text-center mt-10 text-black dark:text-white'>Aucune recette ne correspond à votre recherche</p>}
           </div>
         }
