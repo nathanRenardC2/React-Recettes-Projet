@@ -31,7 +31,7 @@ export default function Recette({ meal, id }) {
   function saveRecette() {
     // Si la recette est déjà sauvegarder on la supprime de la liste
     if (isSave) {
-      setRecettesSave(recettesSave.filter((recette) => recette.idMeal !== meal.idMeal));
+      setRecettesSave(recettesSave.filter((recette) => recette.idMeal !== id));
       setIsSave(false);
     }
     // Sinon on l'ajoute à la liste
