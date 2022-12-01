@@ -10,7 +10,7 @@ export default function RecettesSauvegarder(){
     return(
         <div className="card_list">
             {recettesSave.length !== 0 ? recettesSave.map((meal, index) => (
-                <Recette meal={meal} id={meal.idMeal} key={index} />
+                <Recette meal={meal} id={meal.idMeal} key={meal.idMeal} />
             )) : <p className="text-center text-black dark:text-white">Aucune recette sauvegardée</p>}
         </div>
     )
